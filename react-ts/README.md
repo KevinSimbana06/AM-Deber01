@@ -43,4 +43,35 @@ En proyectos modernos, la configuración de TypeScript se divide en múltiples a
 
 * **`unknown`:** Representa un tipo de dato desconocido. Es necesario comprobar su tipo antes de utilizarlo.
 
+## Conceptos del módulo 2 Props y Estados
+
+* **Tipado de props:** Permite definir los tipos, propiedades y restricciones de los datos que recibe un componente.
+
+* **Propiedades opcionales:** Se indican cuando una propiedad puede estar ausente dentro de un objeto o de las props de un componente.
+
+* **Valores predeterminados:** Son valores asignados cuando no se recibe una propiedad o un parámetro.
+
+* **Inferencia de tipos:** TypeScript deduce automáticamente el tipo de una variable o estado a partir de su valor inicial.
+
+* **Anotación explícita:** Permite declarar manualmente el tipo que puede tener una variable, estado, parámetro o valor de retorno.
+
+* **`null` y `undefined`:** Representan la ausencia de un valor y pueden formar parte de un tipo cuando una información todavía no está disponible.
+
+* **Alias de tipos (`type`):** Permiten nombrar y reutilizar estructuras, uniones o combinaciones de tipos.
+
+* **Uniones de tipos:** Permiten que un valor pueda pertenecer a uno entre varios tipos posibles.
+
+* **Tipos literales:** Limitan un valor a opciones específicas y conocidas.
+
+* **Funciones tipadas:** Definen los tipos de los parámetros que recibe una función y del valor que devuelve.
+
+* **Parámetros opcionales:** Indican que una función puede ejecutarse sin recibir determinados argumentos.
+
+* **Interfaces:** Describen la estructura y las propiedades que debe cumplir un objeto.
+
+* **Extensión de interfaces:** Permite crear una nueva interfaz a partir de otra, heredando sus propiedades y agregando nuevas.
+
+* **Intersecciones (`&`):** Combinan varios tipos en uno solo, por lo que el valor debe cumplir todas las estructuras involucradas.
+
+
 
