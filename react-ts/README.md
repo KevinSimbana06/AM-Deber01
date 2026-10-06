@@ -1,75 +1,22 @@
-# React + TypeScript + Vite
+# 📘 Conceptos Generales de TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TypeScript es un lenguaje de programación fuertemente tipado que se construye sobre JavaScript, añadiendo herramientas estáticas para la detección de errores.
 
-Currently, two official plugins are available:
+Para su uso en la web, el código escrito en TypeScript se **transpila** (se traduce) a código JavaScript estándar. Esto es un paso obligatorio para que cualquier navegador web pueda interpretar y ejecutar la aplicación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📂 Archivos de Configuración
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+En proyectos modernos, la configuración de TypeScript se divide en múltiples archivos para separar las reglas del navegador de las reglas del servidor o herramientas de construcción.
 
-## Expanding the ESLint configuration
+* **`tsconfig.json`**
+  Es el archivo principal que actúa como **orquestador**. Por lo general, no contiene reglas directas, sino que hace referencia (`references`) a los otros archivos de configuración dependiendo de la parte del proyecto que se esté compilando.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **`tsconfig.app.json`**
+  Contiene la configuración y las reglas de TypeScript en las que se maneja el código de la aplicación (el frontend que correrá en el navegador).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **`tsconfig.node.json`**
+  Contiene la configuración de reglas relacionadas estrictamente al entorno de **Node.js** (utilizado comúnmente para archivos de configuración como Vite, Webpack o scripts internos del proyecto).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+---
