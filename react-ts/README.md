@@ -20,3 +20,27 @@ En proyectos modernos, la configuración de TypeScript se divide en múltiples a
   Contiene la configuración de reglas relacionadas estrictamente al entorno de **Node.js** (utilizado comúnmente para archivos de configuración como Vite, Webpack o scripts internos del proyecto).
 
 ---
+
+## Conceptos del módulo Tipos básicos, interfaces, arrays y tuplas.
+
+* **Inferencia de tipos:** TypeScript determina automáticamente el tipo de una variable según el valor que recibe.
+
+* **Anotación de tipos:** Permite definir manualmente el tipo de dato que tendrá una variable.
+
+* **`let`:** Se utiliza para variables cuyo valor puede cambiar durante la ejecución.
+
+* **`const`:** Se utiliza para valores que no serán reasignados.
+
+* **Tipos básicos:** TypeScript incluye tipos como `string`, `number` y `boolean` para representar texto, números y valores lógicos.
+
+* **Arrays:** Estructuras que permiten almacenar varios valores, normalmente del mismo tipo.
+
+* **Tuplas:** Estructuras con una cantidad y un orden fijo de elementos, donde cada posición puede tener un tipo diferente.
+
+* **Interfaces:** Definen la estructura y las propiedades que debe cumplir un objeto.
+
+* **`any`:** Permite utilizar cualquier tipo de dato y reduce la comprobación estática. Se recomienda usarlo solo en casos necesarios, como la migración de proyectos antiguos.
+
+* **`unknown`:** Representa un tipo de dato desconocido. Es necesario comprobar su tipo antes de utilizarlo.
+
+
