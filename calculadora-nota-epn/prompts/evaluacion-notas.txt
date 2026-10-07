@@ -1,0 +1,31 @@
+Markdown
+
+# evaluacion-notas 
+
+Calcula si un estudiante pasa, va a supletorio o reprueba en base a dos notas enteras de 20 puntos. Úsala al programar algoritmos o calculadoras de calificaciones.
+
+## Instructions: Lógica de Evaluación de Notas
+
+Esta skill define las reglas de negocio para determinar el estado académico de un estudiante basado en un sistema de dos notas.
+
+### Cuándo usar
+- Al generar funciones, algoritmos o calculadoras que determinen calificaciones finales.
+- Cuando se deba evaluar el estado de un estudiante (pasa, supletorio, pierde) bajo el esquema de 40 puntos totales.
+
+### Reglas del Sistema
+
+**Entradas:**
+- Se ingresan dos notas independientes.
+- Ambas notas deben ser estrictamente valores **enteros**.
+- Cada nota se califica sobre 20 (el valor debe estar entre 0 y 20).
+
+**Cálculo Final:**
+- La nota final es la suma de las dos notas ingresadas (`Nota Final = Nota 1 + Nota 2`).
+
+**Lógica de Resultados:**
+- **Pasa o es exonerado:** Si la Nota Final es 28 o mayor (`>= 28`).
+- **En supletorio:** Si la Nota Final está entre 18 y 27 inclusive (`18 <= Nota Final <= 27`).
+- **Perdió la materia:** Si la Nota Final es menor a 18 (`< 18`).
+
+### Gotchas
+- Al generar código con esta skill, asegúrate siempre de agregar validaciones defensivas (que las notas no sean mayores a 20, menores a 0, ni contengan decimales) antes de realizar la suma.

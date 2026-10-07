@@ -1,0 +1,27 @@
+# AGENTS.md
+# Contexto del Proyecto
+Aplicación web: Calculadora Nota-Epn.
+
+Stack Tecnológico Estricto: 
+- React 19.3.0
+- TypeScript 7.0
+- Vite 8.3.2
+- Tailwind CSS (con Vite v4)
+
+# Arquitectura y Estilos
+- `src/script/`: Aquí se deben ubicar las lógicas de negocio u operaciones.
+- Divide la interfaz en componentes pequeños dentro de `/src/components` (ej. `Display.tsx`, `Button.tsx`).
+-`src/App`: Es la interfaz central donde se muestra la calculadora.
+- Usa exclusivamente clases de Tailwind CSS para el diseño. La calculadora debe estar centrada en la pantalla y ser responsiva.
+
+# Reglas de Lógica y Estado
+- SIEMPRE usa `useReducer` para la lógica matemática de la calculadora. Evita tener múltiples estados separados (`useState`).
+- Las acciones del reducer deben cubrir: `ADD_DIGIT`, `CHOOSE_OPERATION`, `CLEAR`, `DELETE_DIGIT` y `EVALUATE`.
+- Maneja correctamente los casos límite: divisiones por cero y múltiples puntos decimales.
+
+# Reglas de TypeScript
+- NUNCA uses el tipo `any`.
+- Define tipos e interfaces explícitas para el estado del `useReducer` y las Props de los componentes.
+
+# Herramientas y Despliegue
+- Entorno de desarrollo: `npm run dev`g

@@ -1,0 +1,34 @@
+Markdown
+# calculadora-diseno
+
+Instrucciones de UI/UX y paleta de colores personalizada (#d33724, #3c8dbc, #111111, #e2e4e9) para el diseño visual de una calculadora clásica con alertas de error.
+
+## Instructions: Diseño de Calculadora UI/UX
+
+Esta skill define los lineamientos de interfaz de usuario, estructura (layout) y paleta de colores obligatoria para el diseño de la calculadora.
+
+### Cuándo usar
+- Al generar el código visual, los componentes de interfaz (botones, pantalla) y aplicar estilos a la calculadora web.
+
+### Reglas de Interfaz (Layout)
+- **Estructura general:** Debe verse como una calculadora clásica, con una pantalla superior (display) y un teclado en la parte inferior.
+- **Botones requeridos:**
+  - Números del 0 al 9.
+  - Operación de suma (`+`).
+  - Botón de igual (`=`).
+  - Botón para borrar un solo dígito (ej. `DEL` o `Borrar`).
+  - Botón para limpiar todo (ej. `AC` o `Limpiar`).
+
+### Paleta de Colores Obligatoria
+Debes aplicar exactamente estos valores hexadecimales (ya sea configurando Tailwind o usando clases arbitrarias):
+- **#111111 (Casi negro):** Úsalo para el fondo principal del contenedor de la calculadora o de la pantalla, aportando un estilo sobrio.
+- **#e2e4e9 (Gris claro):** Úsalo para el fondo de los botones numéricos (0-9) y de la base del teclado. Proporciona claridad y un alto contraste frente al fondo oscuro.
+- **#3c8dbc (Azul):** Úsalo para el botón de suma (`+`) y el botón de igual (`=`) destacando las acciones principales.
+- **#d33724 (Rojo):** Úsalo para los botones de borrado (`DEL` y `AC`) indicando acciones destructivas o de reseteo.
+
+### Manejo de Alertas (Errores)
+- Si el usuario realiza una acción no permitida o incorrecta (como intentar sumar sin haber ingresado un número, o presionar igual sin una operación completa), el sistema debe enviar una **alerta** (puede ser un `alert()` nativo o un toast/mensaje en pantalla).
+
+### Gotchas
+- Asegúrate de que el texto dentro de los botones de color tenga un buen contraste (texto oscuro sobre el gris claro `#e2e4e9`, y texto blanco sobre los colores rojo, azul y negro).
+- Mantén el diseño centrado en la pantalla (flexbox/grid) y haz que sea responsivo.
